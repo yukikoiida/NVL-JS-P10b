@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        //declaramos el array
+        var valores = new Array(50);
+        //asignamos los valores aleatorios
+        for (var i=0; i<50; i++){
+            valores [i] = Math.floor((Math.random()*100)+1);
+        }
+        //guardamos los valores según sean pares o impares
+        var par = new Array();
+        var impar = new Array();
+        var esPar;
+        var contadorPar = 0
+        var contadorImpar = 0;
+
+        for(var i=0; i<valores.length; i++){
+           
+            esPar = valores[i]%2;
+            if(esPar == 0 ){
+                par[contadorPar] = valores[i];
+                contadorPar++;
+            }else{
+                impar[contadorImpar] = valores[i];
+                contadorImpar++;
+            }
+        }
+        alert(valores)
+        alert(par);
+        alert(impar);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
